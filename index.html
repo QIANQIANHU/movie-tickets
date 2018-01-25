@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+   <link href="css/styles.css" rel="stylesheet" type="text/css">
+   <script src="js/jquery-3.2.1.js"></script>
+   <script src="js/scripts.js"></script>
+   <title>Movie Tickets</title>
+ </head>
+ <body>
+   <div class="container">
+     <h1>Movie Tickets</h1>
+     <div class="row">
+      <div class="col-md-6">
+         <h2>Select your movie</h2>
+         <form id="new-info">
+           <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
+           <div class="form-group">
+             <label for="new-age">How old are you?(we provide senior discount)</label>
+             <input type="number" class="form-control" id="new-age">
+           </div>
+
+           <div id="new-movies">
+          <h2>I want to see(we provide discount for non-first-release movie): </h2>
+           <div class="radio">
+            <label>
+              <input type="radio" name="movieName" value="Loving Vincent|6.99" checked>
+              Loving Vincent
+              <h3>6.99</h3>
+            </label>
+          </div>
+          <div class="radio" id="movie-name" >
+            <label>
+              <input type="radio" name="movieName" value="Blade Runner 2049|7.99">
+              Blade Runner 2049
+              <h3>7.99</h3>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="movieName" value="Kingsman: The Golden Circle|8.99">
+              Kingsman: The Golden Circle
+              <h3>8.99</h3>
+            </label>
+          </div>
+          <h2>Select your time(we provide matinee discount): </h2>
+           <select class="form-control" id="time">
+            <option value="1">10:00-12:00AM</option>
+            <option value="2">12:00-14:00PM</option>
+            <option value="3">14:00-16:00PM</option>
+            <option value="4">16:00-18:00PM</option>
+            <option value="5">18:00-20:00PM</option>
+            <option value="6">20:00-22:00PM</option>
+            <option value="7">22:00-24:00PM</option>
+          </select>
+        </div>
+
+           <span class="btn btn-primary" id="add-movie">Add another movie</span>
+
+           <button type="submit" class="btn">Submit</button>
+         </form>
+
+         <h2>Your ticket:</h2>
+         <ul id="ticket">
+
+         </ul>
+       </div>
+
+       <div class="col-md-6">
+         <div id="show-ticket">
+           <h2>Your ticket is placed: </h2>
+           <p>Full name: <span class="full-name"></span></p>
+           <!-- <p>Last name: <span class="last-name"></span></p> -->
+           <p>Your movie: <span class="movie-name"></span></p>
+           <p>Time: <span class="time"></span></p>
+           <p>Price: <span class="price"></span></p>
+         </div>
+       </div>
+
+     </div>
+   </div>
+ </body>
+</html>
